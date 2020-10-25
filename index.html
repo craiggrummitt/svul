@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<script src="jquery-3.5.1.min.js"></script>
 </head>
 <meta charset="UTF-8">
 <title>Install Subtitles Viewer</title>
@@ -56,31 +55,32 @@
 		<p>After installing Subtitles Viewer,</p>
 		<p>scan the QR code again...</p>
 	</div>
-	<div id="p1">What am I?
-	</div>
+	<p id="p1" style="color:#FFFFFF">Hello World!</p>
 	<button onclick="myFunction()">Try it</button>
 </div>
 <script type="text/javascript">
 	function myFunction() {
 		var ua = navigator.userAgent.toLowerCase();
-	    var isAndroid = !!navigator.platform.match(android);
+	    var isAndroid = !!navigator.platform.match(/android/);
 		
 		var isIos = !!navigator.platform.match(/iPhone|iPod|iPad/);
-
-		if isIos {
+		console.log("Hello world!");
+		if (isIos) {
 			document.getElementById("p1").innerHTML = "iOS";
 			var els = document.querySelectorAll('.android');
 
 			els.forEach(function(el) {
 		      el.classList.add('hide');
 		  	})
-		} else if isAndroid {
+		} else if (isAndroid) {
 			document.getElementById("p1").innerHTML = "Android!";
 			var els = document.querySelectorAll('.ios');
 
 			els.forEach(function(el) {
 		      el.classList.add('hide');
 		  	})
+		} else {
+			document.getElementById("p1").innerHTML = "Other";
 		}
 	}
 </script>
