@@ -61,26 +61,26 @@
 <script type="text/javascript">
 	function myFunction() {
 		var ua = navigator.userAgent.toLowerCase();
-	    var isAndroid = ua.indexOf("android") > -1;
-		//var isIos = ua.indexOf("ipod") > -1 || ua.indexOf("iPhone") > -1 || ua.indexOf("iPad") > -1;
+	    var isAndroid = !!navigator.platform.match(android);
+		
 		var isIos = !!navigator.platform.match(/iPhone|iPod|iPad/);
 
-		//if isIos {
-		//	alert("Wha");
-			// alert("IS ios!!");
-			// var els = document.querySelectorAll('.android');
+		if isIos {
+			alert("Wha");
+			alert("IS ios!!");
+			var els = document.querySelectorAll('.android');
 
-			// els.forEach(function(el) {
-		 //      el.classList.add('hide');
-		 //  	})
-		//} else if isAndroid {
-			// alert("IS android!!");
-			// var els = document.querySelectorAll('.ios');
+			els.forEach(function(el) {
+		      el.classList.add('hide');
+		  	})
+		} else if isAndroid {
+			alert("IS android!!");
+			var els = document.querySelectorAll('.ios');
 
-			// els.forEach(function(el) {
-		 //      el.classList.add('hide');
-		 //  	})
-		//}
+			els.forEach(function(el) {
+		      el.classList.add('hide');
+		  	})
+		}
 	  document.write("I am android?"+isAndroid+", I am iOS?"+isIos);
 	}
 </script>
