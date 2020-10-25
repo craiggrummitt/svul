@@ -14,12 +14,14 @@
 	  text-align: center;
 	  color: white;
 	  line-height: 0.3;
+	  margin-bottom: 40px;
+	  margin-top: 40px;
 	}
 	.center {
 	  display: block;
 	  margin-left: auto;
 	  margin-right: auto;
-	  margin-bottom: 20px;
+	  margin-bottom: 40px;
 	  width: 40%;
 	}
 	.hide {
@@ -52,27 +54,35 @@
 	</div>
 	<div class="maintext">
 		<p>After installing Subtitles Viewer,</p>
-		<p>scan the QR code again.</p>
+		<p>scan the QR code again...</p>
 	</div>
+	<button onclick="myFunction()">Try it</button>
 </div>
 <script type="text/javascript">
-	var ua = navigator.userAgent.toLowerCase();
-	var isAndroid = ua.indexOf("android") > -1;
-	var isIos = ua.indexOf("ipod") > -1 || ua.indexOf("iPhone") > -1 || ua.indexOf("iPad") > -1;
-	if isIos {
-		var els = document.querySelectorAll('.android');
+	function myFunction() {
+		var ua = navigator.userAgent.toLowerCase();
+	    var isAndroid = ua.indexOf("android") > -1;
+		var isIos = ua.indexOf("ipod") > -1 || ua.indexOf("iPhone") > -1 || ua.indexOf("iPad") > -1;
 
-		els.forEach(function(el) {
-	      el.classList.add('hide');
-	  	})
-	} else if isAndroid {
-		var els = document.querySelectorAll('.ios');
+		//if isIos {
+		//	alert("Wha");
+			// alert("IS ios!!");
+			// var els = document.querySelectorAll('.android');
 
-		els.forEach(function(el) {
-	      el.classList.add('hide');
-	  	})
+			// els.forEach(function(el) {
+		 //      el.classList.add('hide');
+		 //  	})
+		//} else if isAndroid {
+			// alert("IS android!!");
+			// var els = document.querySelectorAll('.ios');
+
+			// els.forEach(function(el) {
+		 //      el.classList.add('hide');
+		 //  	})
+		//}
+	  document.write("I am android?"+isAndroid+", I am iOS?"+isIos);
 	}
-	
 </script>
+
 </body>
 </html>
