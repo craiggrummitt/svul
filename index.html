@@ -62,7 +62,8 @@
 	function myFunction() {
 		var ua = navigator.userAgent.toLowerCase();
 	    var isAndroid = ua.indexOf("android") > -1;
-		var isIos = ua.indexOf("ipod") > -1 || ua.indexOf("iPhone") > -1 || ua.indexOf("iPad") > -1;
+		//var isIos = ua.indexOf("ipod") > -1 || ua.indexOf("iPhone") > -1 || ua.indexOf("iPad") > -1;
+		var isIos = !!navigator.platform.match(/iPhone|iPod|iPad/);
 
 		//if isIos {
 		//	alert("Wha");
