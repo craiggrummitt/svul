@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script src="jquery-3.5.1.min.js"></script>
+</head>
+<meta charset="UTF-8">
+<title>Install Subtitles Viewer</title>
+<style>
+	body {
+		background-color: black;
+	}
+	.maintext {
+	  font: 22px Arial, sans-serif;
+	  text-align: center;
+	  color: white;
+	  line-height: 0.3;
+	}
+	.center {
+	  display: block;
+	  margin-left: auto;
+	  margin-right: auto;
+	  margin-bottom: 20px;
+	  width: 40%;
+	}
+	.hide {
+	  display: none;
+	}
+	.android {
+
+	}
+	.ios {
+
+	}
+</style>
+
+<body>
+<div>
+	<img src="images/titleSplashXHDPI.png" width="100%" height="30%" />
+	<div class="maintext">
+		<p>To view subtitles for this movie, </p>
+		<p>you will first need to download Subtitles Viewer:</p>
+	</div>
+	<div class="ios">
+		<a href="https://apple.co/2EbCY52">
+			<img src="images/Download_on_the_App_Store_Badge_US-UK_wht_092917.png" class="center"/>
+		</a>
+	</div>
+	<div class="android">
+		<a>
+			<img src="images/google-play-badge.png" alt="" class="center">
+		</a>
+	</div>
+	<div class="maintext">
+		<p>After installing Subtitles Viewer,</p>
+		<p>scan the QR code again.</p>
+	</div>
+</div>
+<script type="text/javascript">
+	var ua = navigator.userAgent.toLowerCase();
+	var isAndroid = ua.indexOf("android") > -1;
+	var isIos = ua.indexOf("ipod") > -1 || ua.indexOf("iPhone") > -1 || ua.indexOf("iPad") > -1;
+	if isIos {
+		var els = document.querySelectorAll('.android');
+
+		els.forEach(function(el) {
+	      el.classList.add('hide');
+	  	})
+	} else if isAndroid {
+		var els = document.querySelectorAll('.ios');
+
+		els.forEach(function(el) {
+	      el.classList.add('hide');
+	  	})
+	}
+	
+</script>
+</body>
+</html>
