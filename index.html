@@ -56,6 +56,8 @@
 		<p>After installing Subtitles Viewer,</p>
 		<p>scan the QR code again...</p>
 	</div>
+	<div id="p1">What am I?
+	</div>
 	<button onclick="myFunction()">Try it</button>
 </div>
 <script type="text/javascript">
@@ -66,15 +68,14 @@
 		var isIos = !!navigator.platform.match(/iPhone|iPod|iPad/);
 
 		if isIos {
-			alert("Wha");
-			alert("IS ios!!");
+			document.getElementById("p1").innerHTML = "iOS";
 			var els = document.querySelectorAll('.android');
 
 			els.forEach(function(el) {
 		      el.classList.add('hide');
 		  	})
 		} else if isAndroid {
-			alert("IS android!!");
+			document.getElementById("p1").innerHTML = "Android!";
 			var els = document.querySelectorAll('.ios');
 
 			els.forEach(function(el) {
